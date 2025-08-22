@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>เที่ยวพัทลุง – แนะนำสถานที่ท่องเที่ยว</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <span class="badge">🌿 เที่ยวง่าย ฉบับพัทลุง</span>
+      <h1 class="title">เที่ยวพัทลุง (Phatthalung) – รวมที่เที่ยวห้ามพลาด</h1>
+      <p class="subtitle">คัดที่เด็ดทั้งธรรมชาติ แลนด์มาร์ก วัฒนธรรม พร้อมลิงก์แผนที่จริง ค้นหา-กรองตามหมวดหมู่ และสร้างทริป 1 วันได้เลย</p>
+
+      <div class="controls">
+        <div class="search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#9fb0d0" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="#9fb0d0" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="search" type="text" placeholder="ค้นหาชื่อสถานที่ คำอธิบาย หรือคำว่า 'ทะเลน้อย'" />
+        </div>
+        <button class="chip active" data-filter="all">ทั้งหมด</button>
+        <button class="chip" data-filter="ธรรมชาติ">ธรรมชาติ</button>
+        <button class="chip" data-filter="แลนด์มาร์ก">แลนด์มาร์ก</button>
+        <button class="chip" data-filter="วัฒนธรรม">วัฒนธรรม</button>
+        <button class="chip" data-filter="ประวัติศาสตร์">ประวัติศาสตร์</button>
+        <span class="hint">คลิกหมวดหมู่เพื่อกรอง • กด Enter เพื่อค้นหา</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="list" class="grid"></section>
+  </main>
+
+  <button class="fab" id="planBtn">🗺️ สร้างทริป 1 วัน</button>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modal">
+    <div class="modal">
+      <header class="hero" style="border-radius:20px 20px 0 0; box-shadow:none; margin:0">
+        <h3>แผนเที่ยวพัทลุง 1 วัน (ตัวอย่าง)</h3>
+        <p class="subtitle">เรียงตามเวลา ขับรถได้จริง ปรับเองได้ตามสะดวก</p>
+      </header>
+      <div class="body">
+        <div id="timeline" class="timeline"></div>
+        <div class="actions" style="padding: 10px 0 6px">
+          <button class="btn" id="closeModal">ปิดหน้าต่าง</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container">
+    แหล่งข้อมูลทั่วไปจากประสบการณ์การท่องเที่ยวและสถานที่ยอดนิยมของจังหวัดพัทลุง • ลิงก์แผนที่เป็น Google Maps ภายนอก
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
